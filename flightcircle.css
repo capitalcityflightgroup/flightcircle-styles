@@ -1,210 +1,349 @@
-/* Capital City Flight Group — Flight Circle Shop */
+/* =========================================================
+   CAPITAL CITY FLIGHT GROUP
+   Flight Circle Public Shop Styling
+   ========================================================= */
 
 :root {
-  --navy: #071f3a;
-  --gold: #f2bd32;
-  --gold-hover: #e6ad1f;
-  --text: #17263a;
-  --border: #d9e0e7;
+  --navy: #062846;
+  --gold: #fdbd32;
+  --text: #10263f;
+  --border: #dce3ea;
+  --light: #f5f7fa;
 }
 
-/* PAGE */
+/* =========================================================
+   PAGE BACKGROUND
+   ========================================================= */
+
 html,
 body {
   background: var(--navy) !important;
   color: var(--text) !important;
+  min-height: 100% !important;
 }
 
-/* MAIN WHITE CARD */
-body > .container:first-of-type {
+
+/* =========================================================
+   MAIN WHITE CARD
+   ========================================================= */
+
+body > .container {
   background: #ffffff !important;
-  max-width: 850px !important;
-  min-height: auto !important;
-  margin: 28px auto 35px !important;
-  padding: 34px 42px 38px !important;
+
+  width: calc(100% - 80px) !important;
+  max-width: 860px !important;
+
+  margin: 30px auto !important;
+  padding: 45px 42px 50px !important;
+
   border-radius: 12px !important;
-  box-shadow: 0 8px 28px rgba(0,0,0,.24) !important;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.24) !important;
+
+  min-height: auto !important;
 }
 
-/* IMPORTANT:
-   Keep Flight Circle's form at full width.
-   Do NOT apply a max-width to the form itself.
-*/
-body > .container:first-of-type > form {
+
+/* =========================================================
+   IMPORTANT:
+   FIX FLIGHT CIRCLE / BOOTSTRAP CONTENT WIDTH
+   ========================================================= */
+
+body > .container > form {
   width: 100% !important;
   max-width: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
 }
 
-/* HEADINGS */
+body > .container .row {
+  width: 100% !important;
+  max-width: none !important;
+
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  display: block !important;
+}
+
+body > .container .row > [class*="col-"] {
+  width: 100% !important;
+  max-width: 100% !important;
+
+  float: none !important;
+
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+
+/* =========================================================
+   MAIN FORM CONTENT WIDTH
+   ========================================================= */
+
+#order_form {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+#order_form > .row {
+  width: 100% !important;
+}
+
+#order_form .description {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+body,
+input,
+select,
+textarea,
+button {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif !important;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: var(--navy) !important;
+  color: var(--text) !important;
   font-weight: 700 !important;
 }
 
 h1 {
+  font-size: 32px !important;
+  line-height: 1.2 !important;
   margin-top: 0 !important;
-  margin-bottom: 14px !important;
-  padding-bottom: 10px !important;
-  border-bottom: 3px solid var(--gold) !important;
 }
 
-h2,
-h3,
-h4 {
-  margin-top: 22px !important;
-  margin-bottom: 10px !important;
+h2 {
+  font-size: 23px !important;
 }
 
-/* TEXT */
+h3 {
+  font-size: 19px !important;
+}
+
 p,
-label {
-  color: var(--text) !important;
+label,
+td,
+th {
+  color: var(--text);
 }
 
-/* STANDARD SPACING */
-.row {
-  margin-bottom: 4px;
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+body > .container h1,
+body > .container h2,
+body > .container h3 {
+  border-bottom: 1px solid #e7ebef;
+  padding-bottom: 8px;
 }
 
-hr {
-  margin-top: 14px !important;
-  margin-bottom: 14px !important;
-  border-color: #e4e7eb !important;
-}
 
-/* FORM FIELDS */
-.form-control,
-select,
-textarea,
+/* =========================================================
+   FORM CONTROLS
+   ========================================================= */
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="number"],
-input[type="date"] {
-  border: 1px solid var(--border) !important;
+input[type="password"],
+select,
+textarea,
+.form-control {
+  border: 1px solid #ccd6e0 !important;
   border-radius: 6px !important;
-  background: #ffffff !important;
+
   box-shadow: none !important;
+
+  padding: 8px 12px !important;
+
+  background: #ffffff !important;
+  color: var(--text) !important;
 }
 
-/* FOCUS */
-.form-control:focus,
+input:focus,
 select:focus,
 textarea:focus,
-input:focus {
+.form-control:focus {
   border-color: var(--gold) !important;
-  box-shadow: 0 0 0 2px rgba(242,189,50,.22) !important;
+
+  box-shadow:
+    0 0 0 2px rgba(253, 189, 50, 0.18) !important;
+
   outline: none !important;
 }
 
-/* PRIMARY BUTTONS */
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
 .btn-primary,
+.btn-warning,
 button.btn-primary,
+button.btn-warning,
 input.btn-primary,
-input[type="submit"] {
+input.btn-warning {
   background: var(--gold) !important;
-  border: 1px solid var(--gold) !important;
-  color: var(--navy) !important;
+
+  border-color: var(--gold) !important;
+
+  color: #082541 !important;
+
   font-weight: 700 !important;
+
   border-radius: 7px !important;
-  padding: 10px 24px !important;
-  box-shadow: 0 4px 10px rgba(0,0,0,.24) !important;
-  transition: all .15s ease !important;
+
+  padding: 10px 18px !important;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.15) !important;
 }
 
-/* PRIMARY BUTTON HOVER */
 .btn-primary:hover,
-button.btn-primary:hover,
-input.btn-primary:hover,
-input[type="submit"]:hover {
-  background: var(--gold-hover) !important;
-  border-color: var(--gold-hover) !important;
-  color: var(--navy) !important;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 13px rgba(0,0,0,.27) !important;
+.btn-warning:hover {
+  filter: brightness(0.95);
 }
 
-/* SECONDARY BUTTONS */
-.btn-default,
-.btn-secondary {
-  border-radius: 7px !important;
+
+/* SUCCESS / CHECKOUT BUTTON */
+
+.btn-success {
+  border-radius: 6px !important;
+  font-weight: 600 !important;
 }
 
-/* LINKS */
-a {
-  color: #174f86;
-}
 
-/* CALENDAR */
+/* =========================================================
+   CALENDAR
+   Keep Flight Circle's calendar sizing intact
+   ========================================================= */
+
 .ui-datepicker,
-.datepicker,
-.calendar {
-  border-radius: 7px !important;
-  overflow: hidden !important;
+.datepicker {
+  max-width: 100% !important;
 }
 
-/* FOOTER CONTAINER */
-body > .container:nth-of-type(2) {
+.ui-datepicker table {
+  width: 100% !important;
+}
+
+.ui-datepicker td,
+.ui-datepicker th {
+  text-align: center !important;
+}
+
+
+/* =========================================================
+   TABLES / ORDER SUMMARY
+   ========================================================= */
+
+table {
+  border-collapse: collapse;
+}
+
+.table {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.table td,
+.table th {
+  vertical-align: middle !important;
+}
+
+
+/* =========================================================
+   ALERTS
+   ========================================================= */
+
+.alert {
+  border-radius: 6px !important;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: #b47b00;
+}
+
+a:hover {
+  color: #8d6000;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+body > .container + .container {
   background: transparent !important;
-  max-width: 850px !important;
-  min-height: 0 !important;
-  margin: 0 auto 20px !important;
-  padding: 8px 15px !important;
-  border-radius: 0 !important;
+
+  color: #dce5ed !important;
+
   box-shadow: none !important;
-  color: rgba(255,255,255,.75) !important;
+
+  border-radius: 0 !important;
+
+  padding: 10px 15px 25px !important;
+
+  margin-top: 0 !important;
 }
 
-/* FOOTER TEXT */
-body > .container:nth-of-type(2) p,
-body > .container:nth-of-type(2) span {
-  color: rgba(255,255,255,.75) !important;
-}
-
-/* FOOTER LINKS */
-body > .container:nth-of-type(2) a {
+body > .container + .container a {
   color: var(--gold) !important;
 }
 
-/* REMOVE FOOTER DIVIDER */
-body > .container:nth-of-type(2) hr {
-  display: none !important;
-}
 
-/* TABLET */
-@media (max-width: 900px) {
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
-  body > .container:first-of-type {
-    width: calc(100% - 30px) !important;
-    margin: 15px auto 25px !important;
-    padding: 28px 24px 34px !important;
+@media (max-width: 767px) {
+
+  body > .container {
+    width: calc(100% - 24px) !important;
+
+    margin: 12px auto !important;
+
+    padding: 25px 20px 35px !important;
+
+    border-radius: 9px !important;
   }
 
-  body > .container:nth-of-type(2) {
-    width: calc(100% - 30px) !important;
+  h1 {
+    font-size: 27px !important;
   }
-}
 
-/* MOBILE */
-@media (max-width: 500px) {
-
-  body > .container:first-of-type {
+  body > .container .row {
     width: 100% !important;
-    margin: 0 !important;
-    padding: 22px 16px 30px !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
   }
 
-  body > .container:nth-of-type(2) {
+  body > .container .row > [class*="col-"] {
     width: 100% !important;
-    padding: 10px 16px !important;
+    max-width: 100% !important;
   }
 }
