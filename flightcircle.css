@@ -15,8 +15,8 @@ body {
   color: var(--text) !important;
 }
 
-/* MAIN BOOKING CARD */
-body > .container {
+/* MAIN BOOKING CARD — FIRST CONTAINER ONLY */
+body > .container:first-of-type {
   background: #ffffff !important;
   max-width: 850px !important;
   min-height: auto !important;
@@ -24,6 +24,32 @@ body > .container {
   padding: 34px 42px 38px !important;
   border-radius: 12px !important;
   box-shadow: 0 8px 28px rgba(0,0,0,.24) !important;
+}
+
+/* FOOTER — SECOND CONTAINER */
+body > .container:nth-of-type(2) {
+  background: transparent !important;
+  max-width: 850px !important;
+  min-height: 0 !important;
+  margin: 0 auto 20px !important;
+  padding: 8px 15px !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+}
+
+/* FOOTER TEXT + LINKS */
+body > .container:nth-of-type(2) * {
+  color: rgba(255,255,255,.7) !important;
+}
+
+body > .container:nth-of-type(2) a {
+  color: var(--gold) !important;
+}
+
+/* REMOVE FOOTER DIVIDER */
+body > .container:nth-of-type(2) hr {
+  display: none !important;
 }
 
 /* HEADINGS */
@@ -83,6 +109,7 @@ input[type="date"] {
   box-shadow: none !important;
 }
 
+/* FORM FIELD FOCUS */
 .form-control:focus,
 select:focus,
 textarea:focus,
@@ -107,6 +134,7 @@ input[type="submit"] {
   transition: all .15s ease !important;
 }
 
+/* BUTTON HOVER */
 .btn-primary:hover,
 button.btn-primary:hover,
 input.btn-primary:hover,
@@ -137,45 +165,24 @@ a {
   overflow: hidden !important;
 }
 
-/* Keep Flight Circle's green available dates intact */
-
-
-/* FOOTER — TRANSPARENT ON NAVY */
-footer,
-.footer {
-  background: transparent !important;
-  color: #ffffff !important;
-  font-size: 12px !important;
-  opacity: .75;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-footer p,
-.footer p,
-footer span,
-.footer span {
-  color: #ffffff !important;
-}
-
-footer a,
-.footer a {
-  color: var(--gold) !important;
-}
-
-
 /* TABLET */
 @media (max-width: 900px) {
-  body > .container {
+
+  body > .container:first-of-type {
     width: calc(100% - 30px) !important;
     margin: 15px auto 25px !important;
     padding: 28px 24px 34px !important;
+  }
+
+  body > .container:nth-of-type(2) {
+    width: calc(100% - 30px) !important;
   }
 }
 
 /* MOBILE */
 @media (max-width: 500px) {
-  body > .container {
+
+  body > .container:first-of-type {
     width: 100% !important;
     margin: 0 !important;
     padding: 22px 16px 30px !important;
@@ -183,8 +190,8 @@ footer a,
     box-shadow: none !important;
   }
 
-  footer,
-  .footer {
-    padding: 15px !important;
+  body > .container:nth-of-type(2) {
+    width: 100% !important;
+    padding: 10px 16px !important;
   }
 }
