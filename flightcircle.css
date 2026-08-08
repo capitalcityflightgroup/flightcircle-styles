@@ -195,3 +195,16 @@ a {
     padding: 10px 16px !important;
   }
 }
+/* CENTER CHECKOUT / BILLING CONTENT */
+
+body > .container:first-of-type > form {
+  max-width: 600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Keep form contents naturally aligned */
+body > .container:first-of-type form .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
