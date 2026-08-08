@@ -15,7 +15,7 @@ body {
   color: var(--text) !important;
 }
 
-/* MAIN BOOKING CARD — FIRST CONTAINER ONLY */
+/* MAIN WHITE CARD */
 body > .container:first-of-type {
   background: #ffffff !important;
   max-width: 850px !important;
@@ -26,30 +26,15 @@ body > .container:first-of-type {
   box-shadow: 0 8px 28px rgba(0,0,0,.24) !important;
 }
 
-/* FOOTER — SECOND CONTAINER */
-body > .container:nth-of-type(2) {
-  background: transparent !important;
-  max-width: 850px !important;
-  min-height: 0 !important;
-  margin: 0 auto 20px !important;
-  padding: 8px 15px !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  color: #ffffff !important;
-}
-
-/* FOOTER TEXT + LINKS */
-body > .container:nth-of-type(2) * {
-  color: rgba(255,255,255,.7) !important;
-}
-
-body > .container:nth-of-type(2) a {
-  color: var(--gold) !important;
-}
-
-/* REMOVE FOOTER DIVIDER */
-body > .container:nth-of-type(2) hr {
-  display: none !important;
+/* IMPORTANT:
+   Keep Flight Circle's form at full width.
+   Do NOT apply a max-width to the form itself.
+*/
+body > .container:first-of-type > form {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 /* HEADINGS */
@@ -83,7 +68,7 @@ label {
   color: var(--text) !important;
 }
 
-/* SECTION SPACING */
+/* STANDARD SPACING */
 .row {
   margin-bottom: 4px;
 }
@@ -109,7 +94,7 @@ input[type="date"] {
   box-shadow: none !important;
 }
 
-/* FORM FIELD FOCUS */
+/* FOCUS */
 .form-control:focus,
 select:focus,
 textarea:focus,
@@ -134,7 +119,7 @@ input[type="submit"] {
   transition: all .15s ease !important;
 }
 
-/* BUTTON HOVER */
+/* PRIMARY BUTTON HOVER */
 .btn-primary:hover,
 button.btn-primary:hover,
 input.btn-primary:hover,
@@ -163,6 +148,34 @@ a {
 .calendar {
   border-radius: 7px !important;
   overflow: hidden !important;
+}
+
+/* FOOTER CONTAINER */
+body > .container:nth-of-type(2) {
+  background: transparent !important;
+  max-width: 850px !important;
+  min-height: 0 !important;
+  margin: 0 auto 20px !important;
+  padding: 8px 15px !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: rgba(255,255,255,.75) !important;
+}
+
+/* FOOTER TEXT */
+body > .container:nth-of-type(2) p,
+body > .container:nth-of-type(2) span {
+  color: rgba(255,255,255,.75) !important;
+}
+
+/* FOOTER LINKS */
+body > .container:nth-of-type(2) a {
+  color: var(--gold) !important;
+}
+
+/* REMOVE FOOTER DIVIDER */
+body > .container:nth-of-type(2) hr {
+  display: none !important;
 }
 
 /* TABLET */
@@ -194,17 +207,4 @@ a {
     width: 100% !important;
     padding: 10px 16px !important;
   }
-}
-/* CENTER CHECKOUT / BILLING CONTENT */
-
-body > .container:first-of-type > form {
-  max-width: 600px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Keep form contents naturally aligned */
-body > .container:first-of-type form .row {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
 }
