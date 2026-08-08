@@ -1,7 +1,7 @@
 /* =========================================================
-   CAPITAL CITY FLIGHT GROUP
-   Flight Circle Public Shop Styling
-   ========================================================= */
+CAPITAL CITY FLIGHT GROUP
+Flight Circle Public Shop Styling
+========================================================= */
 
 :root {
   --navy: #062846;
@@ -11,10 +11,9 @@
   --light: #f5f7fa;
 }
 
-
 /* =========================================================
-   PAGE
-   ========================================================= */
+PAGE
+========================================================= */
 
 html,
 body {
@@ -23,10 +22,9 @@ body {
   min-height: 100% !important;
 }
 
-
 /* =========================================================
-   MAIN WHITE CARD
-   ========================================================= */
+MAIN WHITE CARD
+========================================================= */
 
 body > .container:first-of-type {
   background: #ffffff !important;
@@ -45,10 +43,35 @@ body > .container:first-of-type {
   min-height: auto !important;
 }
 
+/* =========================================================
+CAPITAL CITY FLIGHT GROUP LOGO
+
+Adds logo above Discovery Flight without changing
+the existing Flight Circle form structure.
+========================================================= */
+
+body > .container:first-of-type::before {
+  content: "" !important;
+
+  display: block !important;
+
+  width: 100% !important;
+  max-width: 450px !important;
+  height: 105px !important;
+
+  margin: 0 auto 35px !important;
+
+  background-image:
+    url("https://capitalcityflightgroup.github.io/flightcircle-styles/capital-city-flight-group-logo.jpg") !important;
+
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: contain !important;
+}
 
 /* =========================================================
-   FIX FLIGHT CIRCLE / BOOTSTRAP WIDTH
-   ========================================================= */
+FIX FLIGHT CIRCLE / BOOTSTRAP WIDTH
+========================================================= */
 
 body > .container:first-of-type > form {
   width: 100% !important;
@@ -78,10 +101,9 @@ body > .container:first-of-type .row > [class*="col-"] {
   padding-right: 0 !important;
 }
 
-
 /* =========================================================
-   ORDER FORM
-   ========================================================= */
+ORDER FORM
+========================================================= */
 
 #order_form {
   width: 100% !important;
@@ -97,10 +119,9 @@ body > .container:first-of-type .row > [class*="col-"] {
   max-width: 100% !important;
 }
 
-
 /* =========================================================
-   TYPOGRAPHY
-   ========================================================= */
+TYPOGRAPHY
+========================================================= */
 
 body,
 input,
@@ -152,10 +173,9 @@ th {
   color: var(--text);
 }
 
-
 /* =========================================================
-   SECTION HEADINGS
-   ========================================================= */
+SECTION HEADINGS
+========================================================= */
 
 body > .container:first-of-type h1,
 body > .container:first-of-type h2,
@@ -169,10 +189,9 @@ body > .container:first-of-type h3 {
   margin-top: 30px !important;
 }
 
-
 /* =========================================================
-   FORM CONTROLS
-   ========================================================= */
+FORM CONTROLS
+========================================================= */
 
 input[type="text"],
 input[type="email"],
@@ -219,10 +238,9 @@ textarea:focus,
   outline: none !important;
 }
 
-
 /* =========================================================
-   GOLD BUTTONS
-   ========================================================= */
+GOLD BUTTONS
+========================================================= */
 
 .btn-primary,
 .btn-warning,
@@ -266,30 +284,27 @@ input.btn-warning {
   transform: translateY(0);
 }
 
-
 /* =========================================================
-   SUCCESS / CHECKOUT BUTTON
-   ========================================================= */
+SUCCESS / CHECKOUT BUTTON
+========================================================= */
 
 .btn-success {
   border-radius: 6px !important;
   font-weight: 600 !important;
 }
 
-
 /* =========================================================
-   GO BACK BUTTON
-   ========================================================= */
+GO BACK BUTTON
+========================================================= */
 
 .btn-danger {
   border-radius: 6px !important;
   font-weight: 600 !important;
 }
 
-
 /* =========================================================
-   CALENDAR
-   ========================================================= */
+CALENDAR
+========================================================= */
 
 .ui-datepicker,
 .datepicker,
@@ -311,10 +326,9 @@ input.btn-warning {
   text-align: center !important;
 }
 
-
 /* =========================================================
-   ALERT / INFORMATION BOXES
-   ========================================================= */
+ALERT / INFORMATION BOXES
+========================================================= */
 
 .alert {
   max-width: 100% !important;
@@ -324,10 +338,9 @@ input.btn-warning {
   border-radius: 6px !important;
 }
 
-
 /* =========================================================
-   TABLES / ORDER SUMMARY
-   ========================================================= */
+TABLES / ORDER SUMMARY
+========================================================= */
 
 table {
   border-collapse: collapse;
@@ -343,10 +356,9 @@ table {
   vertical-align: middle !important;
 }
 
-
 /* =========================================================
-   LINKS INSIDE MAIN CARD
-   ========================================================= */
+LINKS INSIDE MAIN CARD
+========================================================= */
 
 body > .container:first-of-type a {
   color: #b47b00;
@@ -357,22 +369,20 @@ body > .container:first-of-type a:focus {
   color: #8d6000;
 }
 
-
 /* =========================================================
-   BUTTON SPACING
-   ========================================================= */
+BUTTON SPACING
+========================================================= */
 
 #order_form .btn {
   margin-top: 6px;
 }
 
-
 /* =========================================================
-   FLIGHT CIRCLE FOOTER
+FLIGHT CIRCLE FOOTER
 
-   Keep footer directly on navy background instead of
-   creating another white card.
-   ========================================================= */
+Keep footer directly on navy background instead of
+creating another white card.
+========================================================= */
 
 body > .container:not(:first-of-type) {
   background: transparent !important;
@@ -395,7 +405,6 @@ body > .container:not(:first-of-type) {
   text-align: center !important;
 }
 
-
 /* Footer rows/columns should not create another card */
 
 body > .container:not(:first-of-type) .row {
@@ -416,7 +425,6 @@ body > .container:not(:first-of-type) [class*="col-"] {
   padding: 0 !important;
 }
 
-
 /* Footer horizontal divider */
 
 body > .container:not(:first-of-type) hr {
@@ -428,7 +436,6 @@ body > .container:not(:first-of-type) hr {
   margin: 0 0 20px !important;
 }
 
-
 /* ALL footer text must be readable */
 
 body > .container:not(:first-of-type),
@@ -439,7 +446,6 @@ body > .container:not(:first-of-type) small,
 body > .container:not(:first-of-type) li {
   color: #d8e1e9 !important;
 }
-
 
 /* Footer links use Capital City gold */
 
@@ -457,10 +463,9 @@ body > .container:not(:first-of-type) a:focus {
   text-decoration: underline !important;
 }
 
-
 /* =========================================================
-   MOBILE
-   ========================================================= */
+MOBILE
+========================================================= */
 
 @media (max-width: 767px) {
 
@@ -472,6 +477,18 @@ body > .container:not(:first-of-type) a:focus {
     padding: 25px 20px 35px !important;
 
     border-radius: 9px !important;
+  }
+
+  /* Logo scales down automatically on phones */
+
+  body > .container:first-of-type::before {
+    width: 90% !important;
+    max-width: 380px !important;
+    height: 85px !important;
+
+    margin: 0 auto 25px !important;
+
+    background-size: contain !important;
   }
 
   h1 {
