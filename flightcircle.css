@@ -28,13 +28,13 @@ body {
    MAIN WHITE CARD
    ========================================================= */
 
-body > .container {
+body > .container:first-of-type {
   background: #ffffff !important;
 
   width: calc(100% - 80px) !important;
   max-width: 860px !important;
 
-  margin: 30px auto !important;
+  margin: 30px auto 0 !important;
   padding: 45px 42px 50px !important;
 
   border-radius: 12px !important;
@@ -50,12 +50,12 @@ body > .container {
    FIX FLIGHT CIRCLE / BOOTSTRAP WIDTH
    ========================================================= */
 
-body > .container > form {
+body > .container:first-of-type > form {
   width: 100% !important;
   max-width: none !important;
 }
 
-body > .container .row {
+body > .container:first-of-type .row {
   width: 100% !important;
   max-width: none !important;
 
@@ -65,7 +65,7 @@ body > .container .row {
   display: block !important;
 }
 
-body > .container .row > [class*="col-"] {
+body > .container:first-of-type .row > [class*="col-"] {
   width: 100% !important;
   max-width: 100% !important;
 
@@ -157,9 +157,9 @@ th {
    SECTION HEADINGS
    ========================================================= */
 
-body > .container h1,
-body > .container h2,
-body > .container h3 {
+body > .container:first-of-type h1,
+body > .container:first-of-type h2,
+body > .container:first-of-type h3 {
   border-bottom: 1px solid #e7ebef;
   padding-bottom: 8px;
 }
@@ -221,7 +221,7 @@ textarea:focus,
 
 
 /* =========================================================
-   BUTTONS
+   GOLD BUTTONS
    ========================================================= */
 
 .btn-primary,
@@ -278,7 +278,7 @@ input.btn-warning {
 
 
 /* =========================================================
-   DANGER / GO BACK BUTTON
+   GO BACK BUTTON
    ========================================================= */
 
 .btn-danger {
@@ -289,9 +289,6 @@ input.btn-warning {
 
 /* =========================================================
    CALENDAR
-
-   Keep the calendar compact instead of allowing the
-   Bootstrap width override to stretch it across the card.
    ========================================================= */
 
 .ui-datepicker,
@@ -348,15 +345,15 @@ table {
 
 
 /* =========================================================
-   LINKS
+   LINKS INSIDE MAIN CARD
    ========================================================= */
 
-a {
+body > .container:first-of-type a {
   color: #b47b00;
 }
 
-a:hover,
-a:focus {
+body > .container:first-of-type a:hover,
+body > .container:first-of-type a:focus {
   color: #8d6000;
 }
 
@@ -371,25 +368,93 @@ a:focus {
 
 
 /* =========================================================
-   FOOTER
+   FLIGHT CIRCLE FOOTER
+
+   Keep footer directly on navy background instead of
+   creating another white card.
    ========================================================= */
 
-body > .container + .container {
+body > .container:not(:first-of-type) {
   background: transparent !important;
 
-  color: #dce5ed !important;
+  width: calc(100% - 80px) !important;
+  max-width: 860px !important;
 
-  box-shadow: none !important;
+  min-height: 0 !important;
+
+  margin: 0 auto !important;
+
+  padding: 28px 15px 35px !important;
 
   border-radius: 0 !important;
 
-  padding: 10px 15px 25px !important;
+  box-shadow: none !important;
 
-  margin-top: 0 !important;
+  color: #d8e1e9 !important;
+
+  text-align: center !important;
 }
 
-body > .container + .container a {
+
+/* Footer rows/columns should not create another card */
+
+body > .container:not(:first-of-type) .row {
+  width: 100% !important;
+
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+body > .container:not(:first-of-type) [class*="col-"] {
+  width: 100% !important;
+  max-width: 100% !important;
+
+  float: none !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+}
+
+
+/* Footer horizontal divider */
+
+body > .container:not(:first-of-type) hr {
+  border: 0 !important;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.25) !important;
+
+  margin: 0 0 20px !important;
+}
+
+
+/* ALL footer text must be readable */
+
+body > .container:not(:first-of-type),
+body > .container:not(:first-of-type) p,
+body > .container:not(:first-of-type) span,
+body > .container:not(:first-of-type) div,
+body > .container:not(:first-of-type) small,
+body > .container:not(:first-of-type) li {
+  color: #d8e1e9 !important;
+}
+
+
+/* Footer links use Capital City gold */
+
+body > .container:not(:first-of-type) a,
+body > .container:not(:first-of-type) a:visited {
   color: var(--gold) !important;
+
+  text-decoration: none !important;
+}
+
+body > .container:not(:first-of-type) a:hover,
+body > .container:not(:first-of-type) a:focus {
+  color: #ffffff !important;
+
+  text-decoration: underline !important;
 }
 
 
@@ -399,10 +464,10 @@ body > .container + .container a {
 
 @media (max-width: 767px) {
 
-  body > .container {
+  body > .container:first-of-type {
     width: calc(100% - 24px) !important;
 
-    margin: 12px auto !important;
+    margin: 12px auto 0 !important;
 
     padding: 25px 20px 35px !important;
 
@@ -421,11 +486,11 @@ body > .container + .container a {
     font-size: 18px !important;
   }
 
-  body > .container .row {
+  body > .container:first-of-type .row {
     width: 100% !important;
   }
 
-  body > .container .row > [class*="col-"] {
+  body > .container:first-of-type .row > [class*="col-"] {
     width: 100% !important;
     max-width: 100% !important;
 
@@ -442,5 +507,13 @@ body > .container + .container a {
   .datepicker table {
     width: 100% !important;
     max-width: 100% !important;
+  }
+
+  body > .container:not(:first-of-type) {
+    width: calc(100% - 24px) !important;
+
+    padding: 24px 8px 30px !important;
+
+    font-size: 13px !important;
   }
 }
