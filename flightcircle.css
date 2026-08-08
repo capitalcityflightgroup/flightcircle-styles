@@ -3,7 +3,6 @@
 :root {
   --navy: #071f3a;
   --gold: #f2bd32;
-  --light: #f5f7fa;
   --text: #17263a;
   --border: #d9e0e7;
 }
@@ -15,15 +14,15 @@ body {
   color: var(--text) !important;
 }
 
-/* MAIN BOOKING AREA */
+/* MAIN BOOKING CARD */
 body > .container {
   background: #ffffff !important;
-  max-width: 1050px !important;
-  margin: 35px auto !important;
-  padding: 35px 45px 45px !important;
-  border-radius: 12px !important;
-  box-shadow: 0 8px 28px rgba(0,0,0,.22) !important;
+  max-width: 800px !important;
   min-height: auto !important;
+  margin: 28px auto 40px !important;
+  padding: 38px 45px 45px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,.24) !important;
 }
 
 /* HEADINGS */
@@ -38,16 +37,27 @@ h6 {
 }
 
 h1 {
+  margin-top: 0 !important;
+  padding-bottom: 10px !important;
   border-bottom: 3px solid var(--gold) !important;
-  padding-bottom: 12px !important;
 }
 
-/* SECTION DIVIDERS */
+/* TEXT */
+p,
+label {
+  color: var(--text) !important;
+}
+
+/* SECTION SPACING */
+.row {
+  margin-bottom: 6px;
+}
+
 hr {
   border-color: #e4e7eb !important;
 }
 
-/* INPUTS */
+/* FORM FIELDS */
 .form-control,
 select,
 textarea,
@@ -58,6 +68,7 @@ input[type="number"],
 input[type="date"] {
   border: 1px solid var(--border) !important;
   border-radius: 6px !important;
+  background: #ffffff !important;
   box-shadow: none !important;
 }
 
@@ -66,11 +77,11 @@ select:focus,
 textarea:focus,
 input:focus {
   border-color: var(--gold) !important;
-  box-shadow: 0 0 0 2px rgba(242,189,50,.20) !important;
+  box-shadow: 0 0 0 2px rgba(242,189,50,.22) !important;
   outline: none !important;
 }
 
-/* PRIMARY BUTTONS */
+/* PRIMARY / CHECKOUT BUTTONS */
 .btn-primary,
 button.btn-primary,
 input.btn-primary,
@@ -80,18 +91,20 @@ input[type="submit"] {
   color: var(--navy) !important;
   font-weight: 700 !important;
   border-radius: 7px !important;
-  padding: 10px 22px !important;
-  box-shadow: 0 4px 9px rgba(0,0,0,.22) !important;
-  transition: .15s ease !important;
+  padding: 10px 24px !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,.25) !important;
+  transition: all .15s ease !important;
 }
 
 .btn-primary:hover,
 button.btn-primary:hover,
 input.btn-primary:hover,
 input[type="submit"]:hover {
-  filter: brightness(.95) !important;
+  background: #e6ad1f !important;
+  border-color: #e6ad1f !important;
+  color: var(--navy) !important;
   transform: translateY(-1px);
-  box-shadow: 0 6px 12px rgba(0,0,0,.25) !important;
+  box-shadow: 0 6px 13px rgba(0,0,0,.28) !important;
 }
 
 /* LINKS */
@@ -99,7 +112,7 @@ a {
   color: #174f86;
 }
 
-/* CALENDAR FRAME */
+/* CALENDAR */
 .ui-datepicker,
 .datepicker,
 .calendar {
@@ -107,16 +120,22 @@ a {
   overflow: hidden !important;
 }
 
-/*
-Keep Flight Circle's green availability colors.
-Those colors communicate which dates can be booked.
-*/
+/* Keep Flight Circle's green available-date indicators intact */
 
 /* MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   body > .container {
+    width: calc(100% - 30px) !important;
+    margin: 15px auto 25px !important;
+    padding: 28px 22px 35px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  body > .container {
+    width: 100% !important;
     margin: 0 !important;
-    padding: 22px 18px 35px !important;
+    padding: 24px 16px 35px !important;
     border-radius: 0 !important;
     box-shadow: none !important;
   }
