@@ -57,7 +57,7 @@ label {
   color: var(--text) !important;
 }
 
-/* CLEANER SECTION SPACING */
+/* SECTION SPACING */
 .row {
   margin-bottom: 4px;
 }
@@ -139,14 +139,32 @@ a {
 
 /* Keep Flight Circle's green available dates intact */
 
-/* FOOTER */
+
+/* FOOTER — TRANSPARENT ON NAVY */
 footer,
 .footer {
+  background: transparent !important;
+  color: #ffffff !important;
   font-size: 12px !important;
   opacity: .75;
+  border: none !important;
+  box-shadow: none !important;
 }
 
-/* MOBILE */
+footer p,
+.footer p,
+footer span,
+.footer span {
+  color: #ffffff !important;
+}
+
+footer a,
+.footer a {
+  color: var(--gold) !important;
+}
+
+
+/* TABLET */
 @media (max-width: 900px) {
   body > .container {
     width: calc(100% - 30px) !important;
@@ -155,6 +173,7 @@ footer,
   }
 }
 
+/* MOBILE */
 @media (max-width: 500px) {
   body > .container {
     width: 100% !important;
@@ -162,5 +181,10 @@ footer,
     padding: 22px 16px 30px !important;
     border-radius: 0 !important;
     box-shadow: none !important;
+  }
+
+  footer,
+  .footer {
+    padding: 15px !important;
   }
 }
